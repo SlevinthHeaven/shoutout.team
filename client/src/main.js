@@ -5,6 +5,7 @@ import App from '@/App.vue'
 import router from '@/router'
 import store from '@/store'
 import vuetify from '@/plugins/vuetify'
+import VueClipboard from 'vue-clipboard2'
 
 import Default from '@/layouts/Default'
 import Login from '@/layouts/Login'
@@ -37,6 +38,8 @@ setTSMInterceptor(config => {
 }, data => data, stopTsmLoading, stopTsmLoading)
 
 Vue.config.productionTip = false
+
+Vue.use(VueClipboard)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.component('default-layout', Default)

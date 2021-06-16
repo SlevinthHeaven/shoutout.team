@@ -75,6 +75,19 @@
           </v-col>
         </v-row>
         <v-row dense v-if="user !== null && teams !== null && teams.length > 0">
+          <v-col cols="10">
+            <v-text-field
+              label="Browser Source Url"
+              v-model="browserSourceUrl"
+              disabled
+            ></v-text-field>
+          </v-col>
+          <v-col cols="2">
+            <v-btn block color="primary"
+              v-clipboard:copy="browserSourceUrl">copy</v-btn>
+          </v-col>
+        </v-row>
+        <v-row dense v-if="user !== null && teams !== null && teams.length > 0">
           <v-col cols="12">
             <div class="overlay">
                 <div class="team-logo">
@@ -108,7 +121,8 @@ export default {
     ...mapGetters([
       'user',
       'subscriber',
-      'teams'
+      'teams',
+      'settings'
     ]),
     subscriberText () {
       if (this.subscriber) {
@@ -118,6 +132,9 @@ export default {
     },
     overlayText () {
       return `Welcome ${this.user.display_name} part of the <span class="team-name">"${this.teams[0].team_display_name}"</span> team`
+    },
+    browserSourceUrl () {
+      return `https://shoutout.team/overlay/${this.settings.id}/${this.settings.slug}`
     }
   },
   methods: {
