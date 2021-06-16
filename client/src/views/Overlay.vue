@@ -105,14 +105,14 @@ export default {
                       if (contains.length > 0) {
                         contains[0].teams.push({
                           id: teamValue.id,
-                          name: teamValue.team_name,
+                          name: teamValue.team_display_name,
                           logo: teamValue.thumbnail_url
                         })
                       } else {
                         user.teams = []
                         user.teams.push({
                           id: teamValue.id,
-                          name: teamValue.team_name,
+                          name: teamValue.team_display_name,
                           logo: teamValue.thumbnail_url
                         })
                         this.members.push(user)
