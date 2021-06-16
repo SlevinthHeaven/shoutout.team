@@ -143,93 +143,10 @@ export default {
       img {
         width: 150px;
         height: 150px;
+        border-radius: 50px;
       }
       width: 150px;
       height: 150px;
-      position: absolute;
-    }
-    position: relative;
-    width: 150px;
-    height: 150px;
-    float: left;
-  }
-  .team-logos-2 {
-    > div {
-      &:first-child {
-        top:0;
-        left:0;
-      }
-      &:last-child {
-        bottom:0;
-        right:0;
-      }
-      img {
-        width: 100px;
-        height: 100px;
-        border-radius: 50px;
-      }
-      width: 100px;
-      height: 100px;
-      position: absolute;
-    }
-    position: relative;
-    width: 150px;
-    height: 150px;
-    float: left;
-  }
-  .team-logos-3 {
-    > div {
-      &:first-child {
-        top:0;
-        left:0;
-      }
-      &:last-child {
-        bottom:0;
-        right:32px;
-      }
-      &:nth-child(2){
-        top:0;
-        right:0;
-      }
-      img {
-        width: 100px;
-        height: 100px;
-        border-radius: 50px;
-      }
-      width: 100px;
-      height: 100px;
-      position: absolute;
-    }
-    position: relative;
-    width: 150px;
-    height: 150px;
-    float: left;
-  }
-  .team-logos-4 {
-    > div {
-      &:first-child {
-        top:0;
-        left:0;
-      }
-      &:nth-child(2){
-        top:0;
-        right:0;
-      }
-      &:nth-child(3){
-        bottom:0;
-        left:0;
-      }
-      &:last-child {
-        bottom:0;
-        right:0;
-      }
-      img {
-        width: 100px;
-        height: 100px;
-        border-radius: 50px;
-      }
-      width: 100px;
-      height: 100px;
       position: absolute;
     }
     position: relative;

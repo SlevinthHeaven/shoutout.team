@@ -186,6 +186,7 @@ export default {
       img {
         width: 150px;
         height: 150px;
+        border-radius: 50px;
       }
       width: 150px;
       height: 150px;
