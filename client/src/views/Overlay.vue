@@ -138,11 +138,12 @@ export default {
       }
     },
     teamText () {
+      console.log(this.currentAlert)
       switch (this.currentAlert.teams.length) {
-        case 1: return `Welcome ${this.currentAlert.userName} part of the <span class="team-name">"${this.currentAlert.teams[0].name}"</span> team`
-        case 2: return `Welcome ${this.currentAlert.userName} part of the <span class="team-name">"${this.currentAlert.teams[0].name}"</span> &amp; <span class="team-name">"${this.currentAlert.teams[1].name}"</span> teams`
-        case 3: return `Welcome ${this.currentAlert.userName} part of the <span class="team-name">"${this.currentAlert.teams[0].name}"</span>, <span class="team-name">"${this.currentAlert.teams[1].name}"</span> &amp; <span class="team-name">"${this.currentAlert.teams[2].name}"</span> teams`
-        default: return `Welcome ${this.currentAlert.userName} part of multiple teams I'm on!`
+        case 1: return `Welcome ${this.currentAlert.user.display_name} part of the <span class="team-name">"${this.currentAlert.teams[0].name}"</span> team`
+        case 2: return `Welcome ${this.currentAlert.user.display_name} part of the <span class="team-name">"${this.currentAlert.teams[0].name}"</span> &amp; <span class="team-name">"${this.currentAlert.teams[1].name}"</span> teams`
+        case 3: return `Welcome ${this.currentAlert.user.display_name} part of the <span class="team-name">"${this.currentAlert.teams[0].name}"</span>, <span class="team-name">"${this.currentAlert.teams[1].name}"</span> &amp; <span class="team-name">"${this.currentAlert.teams[2].name}"</span> teams`
+        default: return `Welcome ${this.currentAlert.user.display_name} part of multiple teams I'm on!`
       }
     }
   },
