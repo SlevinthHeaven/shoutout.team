@@ -12,6 +12,27 @@
       <v-btn @click="login"><font-awesome-icon :icon="['fab','twitch']"/>&nbsp;Login</v-btn>
     </v-app-bar>
     <v-main>
+      <v-container fluid>
+        <v-row dense v-if="user !== null">
+          <v-col cols="12">
+            <div class="text-h5">
+              Welcome to shoutout.team
+            </div>
+          </v-col>
+        </v-row>
+        <v-row dense v-if="user !== null">
+          <v-col cols="12">
+            <div>
+              <p>A way for you as a Twitch broadcaster and Twitch Team member to automoatically shoutout your fellow Twitch Team colleagues.
+                shoutout.team includes an overlay to go into your choice of broadcast software and a Chat bot called ShoutoutTeam announcing the arrival in chat of any team members.</p>
+              <p>At this present time shoutout.team will shoutout a Team Member once every 12 hours, this is meant to allow for a one shoutout per day, depending on when you stream.
+                At a later date we will be working on a system that clears previous shoutouts at the end of your stream.</p>
+              <p>We are working on a customisation system which will be available to subscribers of SlevinthHeaven on Twitch and as we create more broadcaster tools in the future,
+                these will be included in the subscription</p>
+            </div>
+          </v-col>
+        </v-row>
+      </v-container>
     </v-main>
     <v-footer>
       <v-btn href="https://twitch.tv/slevinthheaven" target="_blank" icon :style="{ fontSize: '1.5em' }"><font-awesome-icon :icon="['fab','twitch']"/></v-btn>
