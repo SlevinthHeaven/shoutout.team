@@ -1,5 +1,4 @@
 <template>
-
   <div v-if="show & currentAlert !== null" class="overlay">
     <div class="team-logo" v-if="currentAlert.teams.length === 1">
       <template v-for="team in currentAlert.teams">
