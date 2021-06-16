@@ -153,7 +153,7 @@ export default {
         var item = this.queue.shift()
         this.currentAlert = item
         if (this.$route.params.channelId !== item.user.id) {
-          doShoutout(this.$route.params.channelId, this.$route.params.slug, item.user.login, item.teams)
+          doShoutout(this.$route.params.channelId, this.$route.params.slug, item.user.id, item.teams)
             .then(result => {
               if (result) {
                 this.show = true

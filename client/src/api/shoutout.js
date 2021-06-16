@@ -12,8 +12,8 @@ export async function getSettingsAnon (channelId, slug) {
   return response.data
 }
 
-export async function doShoutout (channelId, slug, username, teams) {
-  const response = await TSMPublicInstance.post(`${url}api/ShoutoutTeam/${channelId}/${slug}/${username}`, teams)
+export async function doShoutout (channelId, slug, userId, teams) {
+  const response = await TSMPublicInstance.post(`${url}api/ShoutoutTeam/${channelId}/${slug}/${userId}`, teams)
   return response.data
 }
 
